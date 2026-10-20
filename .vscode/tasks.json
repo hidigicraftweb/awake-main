@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Laravel Queue Worker",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Set-Location -LiteralPath '.\\backend'; php artisan queue:work"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Laravel Queue Worker (backend)",
+			"type": "shell",
+			"command": "Set-Location .\\backend; php artisan queue:work",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Laravel Queue Worker backend/src",
+			"type": "shell",
+			"command": "Set-Location .\\backend\\src; php artisan queue:work",
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
